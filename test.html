@@ -1,37 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Happy Valentine’s Day, Sraboni</title>
+  <title>Happy Valentine’s Day, [Her Name]</title>
   <!-- Google Fonts for elegant script and clean text -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <style>
     /* Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Lato', sans-serif;
-      line-height: 1.6;
-      color: #333;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Lato', sans-serif; line-height: 1.6; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    section { padding: 60px 20px; text-align: center; }
     /* Hero Section */
     .hero {
       height: 100vh;
@@ -43,19 +23,13 @@
       position: relative;
       overflow: hidden;
     }
-
     .hero h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 4rem;
       color: #d6336c;
       margin-bottom: 20px;
     }
-
-    .hero p {
-      font-size: 1.5rem;
-      color: #555;
-    }
-
+    .hero p { font-size: 1.5rem; color: #555; }
     /* Updated heart-animation with a working image URL */
     .heart-animation {
       position: absolute;
@@ -65,35 +39,14 @@
       opacity: 0.1;
       animation: float 10s infinite;
     }
-
     @keyframes float {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0.1;
-      }
-
-      50% {
-        transform: translateY(-50px) rotate(20deg);
-        opacity: 0.2;
-      }
-
-      100% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0.1;
-      }
+      0% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
+      50% { transform: translateY(-50px) rotate(20deg); opacity: 0.2; }
+      100% { transform: translateY(0) rotate(0deg); opacity: 0.1; }
     }
-
     /* Gallery Section */
-    .gallery {
-      background: #fff;
-    }
-
-    .gallery h2 {
-      margin-bottom: 20px;
-      font-size: 2.5rem;
-      color: #d6336c;
-    }
-
+    .gallery { background: #fff; }
+    .gallery h2 { margin-bottom: 20px; font-size: 2.5rem; color: #d6336c; }
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -101,7 +54,6 @@
       max-width: 1000px;
       margin: 0 auto;
     }
-
     /* Flip Card Styles */
     .flip-card {
       background-color: transparent;
@@ -111,7 +63,6 @@
       height: 0;
       padding-bottom: 100%;
     }
-
     .flip-card-inner {
       position: absolute;
       width: 100%;
@@ -119,12 +70,10 @@
       transition: transform 0.6s;
       transform-style: preserve-3d;
     }
-
     .flip-card:not(.no-flip):hover .flip-card-inner,
     .flip-card:not(.no-flip):focus .flip-card-inner {
       transform: rotateY(180deg);
     }
-
     .flip-card-front,
     .flip-card-back {
       position: absolute;
@@ -134,14 +83,12 @@
       border-radius: 8px;
       overflow: hidden;
     }
-
     .flip-card-front img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-
     .flip-card-back {
       background-color: #fff;
       transform: rotateY(180deg);
@@ -154,15 +101,8 @@
       font-size: 1rem;
       text-align: center;
     }
-
-    .flip-card.no-flip .flip-card-inner {
-      transform: none !important;
-    }
-
-    .flip-card.no-flip:hover .flip-card-inner {
-      transform: none !important;
-    }
-
+    .flip-card.no-flip .flip-card-inner { transform: none !important; }
+    .flip-card.no-flip:hover .flip-card-inner { transform: none !important; }
     /* Love Letter Section */
     .letter {
       background: #fafafa;
@@ -174,7 +114,6 @@
       font-size: 1.1rem;
       line-height: 1.8;
     }
-
     .letter h2 {
       text-align: center;
       margin-bottom: 20px;
@@ -182,64 +121,54 @@
       font-family: 'Great Vibes', cursive;
       font-size: 2.5rem;
     }
-
     /* Promise Section */
     .promises {
       background: #fff;
       max-width: 600px;
       margin: 0 auto;
     }
-
     .promises h2 {
       margin-bottom: 20px;
       color: #d6336c;
       font-family: 'Great Vibes', cursive;
       font-size: 2.5rem;
     }
-
     .promises ul {
       list-style: none;
       text-align: left;
       font-size: 1.1rem;
     }
-
     .promises li {
       margin: 10px 0;
       padding-left: 20px;
       position: relative;
     }
-
     .promises li::before {
       content: "♥";
       position: absolute;
       left: 0;
       color: #d6336c;
     }
-
     /* Valentine Question Section using Formspree */
     .valentine-question {
       background: #fff0f0;
     }
-
     .valentine-question h2 {
       margin-bottom: 20px;
       font-size: 2rem;
       color: #d6336c;
       font-family: 'Great Vibes', cursive;
     }
-
     .valentine-question form {
       display: inline-block;
       text-align: left;
     }
-
     .valentine-question label {
       display: block;
       margin-bottom: 10px;
       font-size: 1rem;
       color: #333;
     }
-
     .valentine-question input,
     .valentine-question textarea {
       width: 100%;
@@ -251,7 +180,6 @@
       resize: vertical;
       margin-bottom: 10px;
     }
-
     .valentine-question button {
       padding: 10px 20px;
       font-size: 1rem;
@@ -261,11 +189,9 @@
       border-radius: 4px;
       cursor: pointer;
     }
-
     .valentine-question button:hover {
       background-color: #b52a5f;
     }
-
     /* Footer */
     footer {
       background: #ffe6e6;
@@ -273,41 +199,31 @@
       font-size: 1rem;
       color: #555;
     }
-
-    footer p {
-      margin-bottom: 5px;
-    }
-
+    footer p { margin-bottom: 5px; }
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 3rem;
-      }
-
-      .hero p {
-        font-size: 1.2rem;
-      }
+      .hero h1 { font-size: 3rem; }
+      .hero p { font-size: 1.2rem; }
     }
-
     /* Fade-in Animation */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
       transition: opacity 1s ease-out, transform 1s ease-out;
     }
-
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
   </style>
 </head>
-
 <body>
+  <!-- Background Music -->
+  <audio src="your_music_file.mp3" autoplay loop></audio>
+
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Happy Valentine’s Day, Sraboni, My Flower, My Nur</h1>
+    <h1>Happy Valentine’s Day, [Her Name]</h1>
     <p>Every moment with you is a cherished memory.</p>
-    <!-- Optional animated hearts -->
     <div class="heart-animation" style="top: 20%; left: 10%;"></div>
     <div class="heart-animation" style="top: 60%; right: 15%; animation-duration: 12s;"></div>
   </section>
@@ -321,10 +237,10 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="./assets/one.jpg" alt="Portrait 1">
+              <img src="https://source.unsplash.com/collection/895539/400x400?sig=1" alt="Portrait 1">
             </div>
             <div class="flip-card-back">
-              <p>Your smile lights up my world. That smile can make me forget everything.</p>
+              <p>Your smile lights up my world.</p>
             </div>
           </div>
         </div>
@@ -334,10 +250,10 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="./assets/two.jpg" alt="Portrait 2">
+              <img src="https://source.unsplash.com/collection/895539/400x400?sig=2" alt="Portrait 2">
             </div>
             <div class="flip-card-back">
-              <p>Grace in every gesture. Flower with flower.</p>
+              <p>Grace in every gesture.</p>
             </div>
           </div>
         </div>
@@ -347,10 +263,10 @@
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
-              <img src="./assets/three.jpg" alt="Portrait 3">
+              <img src="https://source.unsplash.com/collection/895539/400x400?sig=3" alt="Portrait 3">
             </div>
             <div class="flip-card-back">
-              <p>Cutest 🤗</p>
+              <p></p>
             </div>
           </div>
         </div>
@@ -361,38 +277,31 @@
   <!-- Love Letter Section -->
   <section class="letter fade-in">
     <h2>My Heart’s Confession</h2>
-    <p>Dearest,</p>
+    <p>Dearest [Her Name],</p>
     <p>
-      From the moment I first saw you, I knew there was something uniquely magical about you. Your gentle laugh, your
-      sparkling eyes, and the way you talk have forever changed me. I remember, I promised myself that I would focus
-      entirely on building a career instead of focusing on love. But even then, I don't know how I fell in love with
-      you. Thinking about you all day long, even in my dreams.
+      From the moment I first saw you, I knew there was something uniquely magical about you. Your gentle laugh, your sparkling eyes, and the way you light up every room have forever changed me. I write these words to remind you that even when we are apart, my thoughts are wrapped around you like a warm embrace.
     </p>
     <p>
-      Every day, I find new reasons to admire you and new dreams of a future where I can show you just how much you mean
-      to me. Every time I see you, it feels like I fall in love with you all over again. And no matter how much i praise
-      you, it seems like little.
+      Every day, I find new reasons to admire you and new dreams of a future where I can show you just how much you mean to me. I promise that soon, when we meet again, I will give you gifts and moments that reflect even a fraction of the love I hold for you.
     </p>
-    <p>I love you so much my Flower. My intentions with you is to marry you and take care of you like a princess. I want
-      to become successful with
-      you and give you all the love and joy in the world.
-    </p>
-    <br>
-    <p>I understand there is a great barrier between us. And I want to remove it. You said our relationship would have
-      been possible if there wasn't this barrier between us. So, I want to remove this barrier with your support.
-      I just want you to tell me if you're willing to lift the barrier just like me.
-      <br>
-      I want to ask you, <b>Will you be my Valentine for the rest of our lives together?</b>
-    </p>
-    <br>
     <p>
-      Until then, let these words serve as a gentle reminder: You are my inspiration, my joy, and my everlasting love. I
-      want you to be successfull in your life and achieve all the goals you have. You're a strong girl. And I'm proude
-      of you <span style="color: red;">&hearts;</span>.
+      Until then, let these words serve as a gentle reminder: You are my inspiration, my joy, and my everlasting love.
     </p>
-    <p>Forever yours,<br>Asit</p>
+    <p>Forever yours,<br>[Your Name]</p>
   </section>
 
+  <!-- Promise Section -->
+  <section class="promises fade-in">
+    <h2>Promises for Our Future</h2>
+    <ul>
+      <li>A surprise date night planned just for you.</li>
+      <li>Handcrafted gifts that speak from the heart.</li>
+      <li>Moments of laughter, warmth, and endless affection.</li>
+      <li>Always being there when you need me most.</li>
+    </ul>
+  </section>
+
+  <!-- Valentine Question Section using Formspree -->
   <section class="valentine-question fade-in">
     <h2>Will you be my Valentine for the rest of our lives together?</h2>
     <form action="https://formspree.io/f/xpwqyalw" method="POST">
@@ -408,21 +317,19 @@
     </form>
   </section>
 
-
   <!-- Footer -->
   <footer>
-    <p>Forever yours, Asit</p>
-    <p>Created with all my love <span style="color: red;">&hearts;</span>.</p>
+    <p>Forever yours, [Your Name]</p>
+    <p>Created with all my love.</p>
   </footer>
 
   <!-- JavaScript for fade-in and disabling flip if no message -->
   <script>
-    // Simple Intersection Observer for fade-in effects
     const faders = document.querySelectorAll('.fade-in');
     const options = { threshold: 0.3 };
     const appearOnScroll = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target);
         }
@@ -430,13 +337,11 @@
     }, options);
     faders.forEach(fader => appearOnScroll.observe(fader));
 
-    // Disable flip effect if back face message is empty
     document.querySelectorAll('.flip-card-back').forEach(back => {
-      if (back.textContent.trim() === "") {
+      if(back.textContent.trim() === "") {
         back.closest('.flip-card').classList.add('no-flip');
       }
     });
   </script>
 </body>
-
 </html>
